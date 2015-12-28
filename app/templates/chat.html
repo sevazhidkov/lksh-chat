@@ -179,11 +179,11 @@
                     socket.emit('joined', {});
                 });
                 socket.on('status', function(data) {
-                    $('#chat').val($('#chat').val() + '<' + data.msg + '>\n');
+                    $('#chat').html($('#chat').html() + '<' + data.msg + '>\n');
                     $('#chat').scrollTop($('#chat')[0].scrollHeight);
                 });
                 socket.on('message', function(data) {
-                    $('#chat').val($('#chat').val() + data.msg + '\n');
+                    $('#chat').html($('#chat').html() + '<li>' + data.msg + '</li>' + '\n');
                     $('#chat').scrollTop($('#chat')[0].scrollHeight);
                 });
                 $('#text').keypress(function(e) {
@@ -205,7 +205,10 @@
     </head>
     <body>
         <h1>Чатик:</h1>
-        <textarea id="chat" cols="80" rows="20"></textarea><br><br>
+        <!-- <textarea id="chat" cols="80" rows="20"></textarea -->
+        <ul id="chat">
+        </ul>
+        <br><br>
         <input id="text" size="80" placeholder="Ваше сообщение"><br><br>
         <a href="#" onclick="leave_room();">Покинуть чатик</a>
     </body>
