@@ -1,0 +1,5 @@
+flask
+Flask-WTF
+eventlet==0.17.4
+Flask-SocketIO==1.0
+greenlet==0.4.2
