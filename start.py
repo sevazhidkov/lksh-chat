@@ -1,3 +1,3 @@
 from app import socketio, app
 
-socketio.run(app, port=8000)
+socketio.run(app, debug=True, port=8000)
