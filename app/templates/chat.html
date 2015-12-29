@@ -179,7 +179,7 @@
                     socket.emit('joined', {});
                 });
                 socket.on('status', function(data) {
-                    $('#chat').html($('#chat').html() + '<' + data.msg + '>\n');
+                    $('#chat').html($('#chat').html() + '<li>' + '<' + data.msg + '>' + '</li>' + '\n');
                     $('#chat').scrollTop($('#chat')[0].scrollHeight);
                 });
                 socket.on('message', function(data) {
