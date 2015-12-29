@@ -208,8 +208,10 @@
     <body>
         <h1>Чатик:</h1>
         <!-- <textarea id="chat" cols="80" rows="20"></textarea -->
-        <ul id="chat">
-        </ul>
+        <div class="chat">
+          <ul id="chat" style="height:300px; overflow:auto";>
+          </ul>
+        </div>
         <br><br>
         <input id="text" size="80" placeholder="Ваше сообщение"><br><br>
         <a href="#" onclick="leave_room();">Покинуть чатик</a>
